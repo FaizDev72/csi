@@ -20,7 +20,7 @@ export default function AboutUs() {
 
       {/* Description */}
       <div className="max-w-6xl px-8  mt-14 sm:mt-20">
-        <p className=" text-xl sm:text-2xl font-normal sm:font-medium text-justify sm:text-center font-sans text-black">
+        <p className=" text-xl sm:text-2xl font-normal sm:font-medium text-justify font-sans text-black">
           The Computer Society Of India is a non-profit professional body that meets to exchange views and
           information to learn and share ideas. Being a national level committee, we work together to discuss
           technology with like-minded people. CSI is known for conducting a plethora of events ranging from

@@ -46,7 +46,7 @@ function WhyToJoin() {
               <div className='text-[#003089] text-xl md:text-2xl'> 
                 {title}
               </div>
-              <div className='text-[#5D5D5D] text-start text-base md:text-xl font-productsans font-light'>
+              <div className='text-[#5D5D5D] text-justify text-base md:text-xl font-productsans font-light'>
                 {description}
               </div>
             </div>
