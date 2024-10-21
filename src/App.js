@@ -8,13 +8,15 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 //import Spinner from "./components/Spinner";
 import SkeletonScreen from "./components/SkeletonScreen"; // Import the SkeletonScreen component
+import Spinner from "./components/Spinner";
+import EventPage from "./screens/EventPage";
 
 function BootcampPrerequisites() {
   useEffect(() => {
     window.location.replace("https://www.notion.so/csiace/CSI-Bootcamp-Prerequisites-104764b863578079a322e5e096e44fd2?pvs=4");
   }, []);
 
-  return null; 
+  return null;
 }
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
     // Simulate loading time (e.g., fetching data)
     const timer = setTimeout(() => {
       setLoading(false); // Set loading to false after 4 seconds
-    }, 4000);
+    }, 2000);
 
     return () => clearTimeout(timer); // Cleanup the timer
   }, []);
@@ -36,13 +38,14 @@ function App() {
         <Router>
           <div className="App">
             {loading ? (
-              <SkeletonScreen /> // Show skeleton screen while loading
+              <Spinner /> // Show skeleton screen while loading
             ) : (
               <Routes>
-                <Route path="/" element={<LandingPage />} /> 
-                <Route path="/bootcamp" element={<BootcampPage />} />
+                <Route path="/" element={<LandingPage />} />
+                {/* <Route path="/bootcamp" element={<BootcampPage />} />
                 <Route path="/bootcamp/:bootcampName" element={<BootcampDetails />} />
-                <Route path="/bootcamp/prerequisites" element={<BootcampPrerequisites />} />
+                <Route path="/bootcamp/prerequisites" element={<BootcampPrerequisites />} /> */}
+                <Route path="/event" element={<EventPage/>} />
               </Routes>
             )}
           </div>
